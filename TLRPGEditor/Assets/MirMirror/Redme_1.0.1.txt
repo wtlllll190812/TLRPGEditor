@@ -1,0 +1,38 @@
+----------------------------------------------
+     MVDE : MirMirror Visual Dialogue Editor
+         Copyright © 2021 MirMirror
+           Version 1.0.1
+----------------------------------------------
+
+Thanks for choosing MVDE for your game project!!
+
+PLEASE NOTE that MVDE can only be legally downloaded from the following 1 sources:
+	1. mirrror.itch.io (Standard License)
+	
+If you've obtained MVDE via some other means then note that your license is effectively invalid,
+as MirMirror cannot provide support for pirated and/or potentially modified software.
+
+All rights at MirMirror. You can't use this asset NFTs sales. If you want to use for NFT sales, you need additional contracts are required for copyright uses.
+
+If you have any questions, please contact to MirMirror@outlook.com
+
+-----------------
+ How to use
+-----------------
+1. Import TextMeshPro if you have not
+2. Import this asset from asset store
+3. Click MVDE Button at Tools
+4. You can open a file to edit, or create a new file to start
+5. If you want to play dialogue in your project, you need to drag the prefab called MMDialogueBox(Assets/MirMirror/Resources/MMDialogueBox.prefab) to Canvas as his Child
+6. Then you need to select your dialogue data you have created in MVDE and drag it to MMDialogueController in Inspector under MMDialogueBox
+7. If you want to know more details, open the Demo(Assets/MirMirror/Demo/Demo.unity), right click in MMDialogueController under MMDialogueBox to Click ===StartDiaogue===
+8. You can also watch the video on Youtube and know more details
+
+-----------------
+ Version History
+-----------------
+1.0.1
+- bug fixed : export Data error
+
+1.0.0
+- New  : First Upload version

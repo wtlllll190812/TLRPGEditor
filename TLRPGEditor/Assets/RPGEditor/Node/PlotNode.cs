@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 [NodeWidth(200)]
 [NodeTint("#3fa063")]//Node颜色
-public class PlotNode : RPGNode
+public class PlotNode : ProcessNode
 {
 
 	// Use this for initialization

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 [NodeWidth(100)]
 [NodeTint("#2B714C")]
-public class StartNode : RPGNode
+public class StartNode : ProcessNode
 {
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;

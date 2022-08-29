@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 [NodeWidth(100)]
 [NodeTint("#9A4747")]
-public class EndNode : RPGNode
+public class EndNode : ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]
 	public bool enter;

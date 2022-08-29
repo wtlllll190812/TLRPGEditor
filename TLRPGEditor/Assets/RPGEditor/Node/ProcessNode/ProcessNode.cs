@@ -4,20 +4,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public abstract class RPGNode : Node 
+public abstract class ProcessNode : Node 
 {
-    protected RPGNodeGraph rpgGraph;
+    protected ProcessNodeGraph rpgGraph;
 
     protected override void Init()
     {
-        rpgGraph = graph as RPGNodeGraph;
+        rpgGraph = graph as ProcessNodeGraph;
     }
 
     public virtual void ResetNode() { }
 
     protected void MoveNextNode()
     {
-        var node = GetOutputPort("exit").Connection?.node as RPGNode;
+        var node = GetOutputPort("exit").Connection?.node as ProcessNode;
         if (node == null) Debug.LogError("NodePort is null");
         rpgGraph.currentNode = node;
         ResetNode();

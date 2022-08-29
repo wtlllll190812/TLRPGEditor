@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 [NodeWidth(500)]
 [NodeTint("#B78352")]
-public class SwitchNode : RPGNode
+public class SwitchNode : ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]
 	public bool enter;
@@ -27,7 +27,7 @@ public class SwitchNode : RPGNode
     {
 		if(result!=null)
         {
-			var node = GetOutputPort("options "+(int)result).Connection?.node as RPGNode;
+			var node = GetOutputPort("options "+(int)result).Connection?.node as ProcessNode;
 			if (node == null) Debug.LogError("NodePort is null");
 			rpgGraph.currentNode = node;
 			ResetNode();

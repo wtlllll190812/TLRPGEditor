@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 [NodeWidth(400)]
 [NodeTint("#3f6fa0")]//Node颜色
-public class DialogueNode : RPGNode
+public class DialogueNode : ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]
 	public bool enter;

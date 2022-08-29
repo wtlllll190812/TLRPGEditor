@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-public class NPCSceneGraph :SceneGraph<NPCNodeGraph>
+public class NPCSceneGraph :SceneGraph<ProcessNodeGraph>
 {
     public TMP_Text TMPro;
     public TMP_Dropdown options;

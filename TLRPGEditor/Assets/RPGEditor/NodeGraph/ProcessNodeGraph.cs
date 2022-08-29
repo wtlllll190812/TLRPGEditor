@@ -4,10 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 [CreateAssetMenu]
-public abstract class RPGNodeGraph : NodeGraph 
+public class ProcessNodeGraph : NodeGraph
 {
 	private StartNode startNode;
-	public RPGNode currentNode;
+	public ProcessNode currentNode;
 
 	public void SetStartNode(StartNode node)
 	{
@@ -17,5 +17,10 @@ public abstract class RPGNodeGraph : NodeGraph
 	public void Start()
 	{
 		startNode.OnEnter();
+	}
+
+	public void MoveNext()
+	{
+		currentNode.MoveNext();
 	}
 }

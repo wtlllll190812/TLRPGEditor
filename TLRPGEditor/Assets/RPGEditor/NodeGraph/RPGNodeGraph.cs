@@ -16,7 +16,7 @@ public abstract class RPGNodeGraph : NodeGraph
 
 	public void Start()
     {
-		startNode.OnEnter();
+		startNode.Execute();
 	}
 
 	public void MoveNext()

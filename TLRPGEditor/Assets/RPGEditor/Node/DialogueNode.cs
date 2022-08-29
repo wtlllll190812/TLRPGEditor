@@ -28,19 +28,25 @@ public class DialogueNode : RPGNode
 
 	public override void MoveNext()
 	{
-		if(currentIndex<Dialogues.Count)
-        {
-			Debug.Log(Dialogues[currentIndex]);
-			currentIndex++;
-        }
-		else
+		if(currentIndex == Dialogues.Count-1)
         {
 			MoveNextNode();
         }
+		currentIndex++;
 	}
 
-	public override void OnEnter()
+	public override void Execute()
 	{
 		currentIndex = 0;
 	}
+
+	public string GetDialogue()
+    {
+		return Dialogues[currentIndex];
+    }
+
+    public override void ResetNode()
+    {
+		currentIndex = 0;
+    }
 }

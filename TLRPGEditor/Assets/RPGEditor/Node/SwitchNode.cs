@@ -4,10 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 [NodeWidth(500)]
-[NodeTint("#3f6fa0")]//Node颜色
+[NodeTint("#B78352")]
 public class SwitchNode : RPGNode
 {
-	//public new bool exit;
+	[Input(backingValue = ShowBackingValue.Never)]
+	public bool enter;
+
 	[Output(dynamicPortList = true)] public string[] options;
 	public int? result=null;
 
@@ -30,12 +32,10 @@ public class SwitchNode : RPGNode
 			rpgGraph.currentNode = node;
 			ResetNode();
 		}
-        //throw new System.NotImplementedException();
     }
 
     public override void OnEnter()
     {
 		result = null;
-		//throw new System.NotImplementedException();
 	}
 }

@@ -8,19 +8,21 @@ using System.Collections.Generic;
 [NodeTint("#3f6fa0")]//Node颜色
 public class DialogueNode : RPGNode
 {
+	[Input(backingValue = ShowBackingValue.Never)]
+	public bool enter;
+	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
+	public bool exit;
+
+
 	public List<string> Dialogues;
 
 	private int currentIndex=0;
-	//[Input(backingValue= ShowBackingValue.Never)] public float value;
-	//[Output] public float result;
-
-	// Use this for initialization
+	
 	protected override void Init()
 	{
 		base.Init();
 	}
 
-	// Return the correct value of an output port when requested
 	public override object GetValue(NodePort port)
 	{
 		return null;

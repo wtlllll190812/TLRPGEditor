@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-public class NPCSceneNode :SceneGraph<NPCNodeGraph>
+public class NPCSceneGraph :SceneGraph<NPCNodeGraph>
 {
     public TMP_Text TMPro;
     public TMP_Dropdown options;
@@ -64,7 +64,6 @@ public class NPCSceneNode :SceneGraph<NPCNodeGraph>
 
     public void SetSwitchNode(int index)
     {
-        Debug.Log(index);
         if(switchNode!=null)
             switchNode.result = index;
     }

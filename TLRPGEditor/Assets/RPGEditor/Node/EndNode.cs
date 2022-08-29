@@ -3,9 +3,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[NodeWidth(100)]
+[NodeTint("#9A4747")]
 public class EndNode : RPGNode
 {
-	// Use this for initialization
+	[Input(backingValue = ShowBackingValue.Never)]
+	public bool enter;
+
 	protected override void Init() {
 		base.Init();
 	}

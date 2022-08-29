@@ -3,8 +3,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[NodeWidth(100)]
+[NodeTint("#2B714C")]
 public class StartNode : RPGNode
 {
+	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
+	public bool exit;
+
 	protected override void Init()
 	{
 		base.Init();

@@ -10,17 +10,12 @@ public abstract class RPGNodeGraph : NodeGraph
 	public RPGNode currentNode;
 
 	public void SetStartNode(StartNode node)
-    {
+	{
 		startNode = node;
 	}
 
 	public void Start()
-    {
+	{
 		startNode.OnEnter();
-	}
-
-	public void MoveNext()
-    {
-		currentNode.MoveNext();
 	}
 }

@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using XNode;
 using UnityEngine;
-using XNode;
+using System.Collections;
+using Sirenix.OdinInspector;
+using System.Collections.Generic;
 
 namespace XNode {
 	/// <summary> Lets you instantiate a node graph in the scene. This allows you to reference in-scene objects. </summary>
-	public class SceneGraph : MonoBehaviour {
+	public class SceneGraph : SerializedMonoBehaviour {
 		public NodeGraph graph;
 	}
 

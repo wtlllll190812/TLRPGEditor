@@ -14,6 +14,14 @@ public abstract class RPGNode : Node
         rpgGraph = graph as RPGNodeGraph;
     }
 
+    protected void MoveNextNode()
+    {
+        var node = GetOutputPort("exit").Connection?.node as RPGNode;
+        if (node == null) Debug.Log("Node Graph End");
+        rpgGraph.currentNode = node;
+        node.OnEnter();
+    }
+
     public abstract void MoveNext();
 
     public abstract void OnEnter();

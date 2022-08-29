@@ -8,10 +8,11 @@ using System.Collections.Generic;
 [NodeTint("#3f6fa0")]//Node颜色
 public class DialogueNode : RPGNode
 {
-	public List<string> x;
+	public List<string> Dialogues;
 
-	[Input(backingValue= ShowBackingValue.Never)] public float value;
-	[Output] public float result;
+	private int currentIndex=0;
+	//[Input(backingValue= ShowBackingValue.Never)] public float value;
+	//[Output] public float result;
 
 	// Use this for initialization
 	protected override void Init()
@@ -27,11 +28,19 @@ public class DialogueNode : RPGNode
 
 	public override void MoveNext()
 	{
-		throw new System.NotImplementedException();
+		if(currentIndex<Dialogues.Count)
+        {
+			Debug.Log(Dialogues[currentIndex]);
+			currentIndex++;
+        }
+		else
+        {
+			MoveNextNode();
+        }
 	}
 
 	public override void OnEnter()
 	{
-		throw new System.NotImplementedException();
+		currentIndex = 0;
 	}
 }

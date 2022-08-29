@@ -18,15 +18,12 @@ public class StartNode : RPGNode
 
 	public override void MoveNext()
 	{
-        foreach (var item in GetOutputPort("exit").GetConnections())
-        {
-			var node= item.node as RPGNode;
-			node.OnEnter();
-		} 
+		MoveNextNode();
 	}
 
 	public override void OnEnter()
 	{
+		Debug.Log("RPGNode Start");
 		MoveNext();
 	}
 }

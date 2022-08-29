@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public abstract class RPGNodeGraph : NodeGraph 
 {
 	private StartNode startNode;
+	public RPGNode currentNode;
 
 	public void SetStartNode(StartNode node)
     {
@@ -16,5 +17,10 @@ public abstract class RPGNodeGraph : NodeGraph
 	public void Start()
     {
 		startNode.OnEnter();
+	}
+
+	public void MoveNext()
+    {
+		currentNode.MoveNext();
 	}
 }

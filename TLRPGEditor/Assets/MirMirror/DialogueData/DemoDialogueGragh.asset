@@ -1,0 +1,409 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe68c2307f7907468a9595b98b41156, type: 3}
+  m_Name: DemoDialogueGragh
+  m_EditorClassIdentifier: 
+  m_MMDialogue_Data: {fileID: 11400000, guid: dfd35b5746461bb40933754f8bc35f93, type: 2}
+  m_GraghStartNode:
+    m_Rect:
+      serializedVersion: 2
+      x: 47
+      y: 322
+      width: 180
+      height: 80
+    m_InPointsID: 
+    m_OutPointsID: 00000000
+    m_NodeID_Type:
+      ID: 0
+      m_NODETYPE: 0
+  m_GraghDialogueNodes:
+  - m_Rect:
+      serializedVersion: 2
+      x: 327
+      y: 346
+      width: 300
+      height: 130
+    m_InPointsID: 01000000
+    m_OutPointsID: 02000000
+    m_NodeID_Type:
+      ID: 0
+      m_NODETYPE: 1
+  - m_Rect:
+      serializedVersion: 2
+      x: 1057
+      y: 249
+      width: 300
+      height: 130
+    m_InPointsID: 06000000
+    m_OutPointsID: 07000000
+    m_NodeID_Type:
+      ID: 1
+      m_NODETYPE: 1
+  - m_Rect:
+      serializedVersion: 2
+      x: 1049
+      y: 441
+      width: 300
+      height: 130
+    m_InPointsID: 08000000
+    m_OutPointsID: 09000000
+    m_NodeID_Type:
+      ID: 2
+      m_NODETYPE: 1
+  - m_Rect:
+      serializedVersion: 2
+      x: 1451
+      y: 445
+      width: 300
+      height: 185
+    m_InPointsID: 0a000000
+    m_OutPointsID: 0b000000
+    m_NodeID_Type:
+      ID: 3
+      m_NODETYPE: 1
+  - m_Rect:
+      serializedVersion: 2
+      x: 1819
+      y: 458
+      width: 300
+      height: 130
+    m_InPointsID: 0c000000
+    m_OutPointsID: 0d000000
+    m_NodeID_Type:
+      ID: 4
+      m_NODETYPE: 1
+  - m_Rect:
+      serializedVersion: 2
+      x: 2248
+      y: 493
+      width: 300
+      height: 130
+    m_InPointsID: 0e000000
+    m_OutPointsID: 0f000000
+    m_NodeID_Type:
+      ID: 5
+      m_NODETYPE: 1
+  m_GraghChoiceNodes:
+  - m_Rect:
+      serializedVersion: 2
+      x: 721
+      y: 325
+      width: 150
+      height: 95
+    m_InPointsID: 03000000
+    m_OutPointsID: 0400000005000000
+    m_NodeID_Type:
+      ID: 0
+      m_NODETYPE: 2
+  m_GraghEventNodes:
+  - m_Rect:
+      serializedVersion: 2
+      x: 1533
+      y: 269
+      width: 180
+      height: 50
+    m_InPointsID: 10000000
+    m_OutPointsID: 11000000
+    m_NodeID_Type:
+      ID: 0
+      m_NODETYPE: 3
+  - m_Rect:
+      serializedVersion: 2
+      x: 2688
+      y: 490
+      width: 180
+      height: 50
+    m_InPointsID: 12000000
+    m_OutPointsID: 13000000
+    m_NodeID_Type:
+      ID: 1
+      m_NODETYPE: 3
+  m_Lines:
+  - m_StartPointID: 0
+    m_EndPointID: 1
+  - m_StartPointID: 2
+    m_EndPointID: 3
+  - m_StartPointID: 4
+    m_EndPointID: 6
+  - m_StartPointID: 5
+    m_EndPointID: 8
+  - m_StartPointID: 9
+    m_EndPointID: 10
+  - m_StartPointID: 11
+    m_EndPointID: 12
+  - m_StartPointID: 13
+    m_EndPointID: 14
+  - m_StartPointID: 7
+    m_EndPointID: 16
+  - m_StartPointID: 15
+    m_EndPointID: 18
+  m_Points:
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 207
+      y: 322
+      width: 20
+      height: 20
+    m_PointID: 0
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 0
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 327
+      y: 346
+      width: 20
+      height: 20
+    m_PointID: 1
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 607
+      y: 346
+      width: 20
+      height: 20
+    m_PointID: 2
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 721
+      y: 325
+      width: 20
+      height: 20
+    m_PointID: 3
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 2
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 851
+      y: 350
+      width: 20
+      height: 20
+    m_PointID: 4
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 2
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 851
+      y: 375
+      width: 20
+      height: 20
+    m_PointID: 5
+    m_NodePointNo: 1
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 2
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1057
+      y: 249
+      width: 20
+      height: 20
+    m_PointID: 6
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 1
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1337
+      y: 249
+      width: 20
+      height: 20
+    m_PointID: 7
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 1
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1049
+      y: 441
+      width: 20
+      height: 20
+    m_PointID: 8
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 2
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1329
+      y: 441
+      width: 20
+      height: 20
+    m_PointID: 9
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 2
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1451
+      y: 445
+      width: 20
+      height: 20
+    m_PointID: 10
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 3
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1731
+      y: 445
+      width: 20
+      height: 20
+    m_PointID: 11
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 3
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1819
+      y: 458
+      width: 20
+      height: 20
+    m_PointID: 12
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 4
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 2099
+      y: 458
+      width: 20
+      height: 20
+    m_PointID: 13
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 4
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 2248
+      y: 493
+      width: 20
+      height: 20
+    m_PointID: 14
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 5
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 2528
+      y: 493
+      width: 20
+      height: 20
+    m_PointID: 15
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 5
+      m_NODETYPE: 1
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1533
+      y: 269
+      width: 20
+      height: 20
+    m_PointID: 16
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 3
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 1693
+      y: 269
+      width: 20
+      height: 20
+    m_PointID: 17
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 0
+      m_NODETYPE: 3
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 2688
+      y: 490
+      width: 20
+      height: 20
+    m_PointID: 18
+    m_NodePointNo: 0
+    m_ConnectionPointType: 0
+    m_Owner:
+      ID: 1
+      m_NODETYPE: 3
+  - m_Editor: {fileID: 0}
+    m_Rect:
+      serializedVersion: 2
+      x: 2848
+      y: 490
+      width: 20
+      height: 20
+    m_PointID: 19
+    m_NodePointNo: 0
+    m_ConnectionPointType: 1
+    m_Owner:
+      ID: 1
+      m_NODETYPE: 3

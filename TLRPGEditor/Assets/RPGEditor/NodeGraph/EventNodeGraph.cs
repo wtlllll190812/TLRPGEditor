@@ -1,16 +1,16 @@
 ﻿using XNode;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.Events;
 using System.Collections.Generic;
 
 [CreateAssetMenu]
 public class EventNodeGraph : NodeGraph
 { 
-	public Dictionary<string, UnityEvent> events;
-	
-	public void AddNewEvent(string eventName,UnityEvent _event)
+	public void Init()
     {
-		events[eventName] = _event;
+        foreach (EventNode item in nodes)
+        {
+            EventQueue.instance.AddEvent(item.eventName,item.nodeEvent);
+        }
     }
 }

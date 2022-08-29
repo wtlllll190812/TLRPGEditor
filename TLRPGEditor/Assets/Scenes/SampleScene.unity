@@ -908,7 +908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc69b266636967847958aa080ec96d7f, type: 3}
   m_Name: EventSceneGraph-graph
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 967642040}
 --- !u!1 &685460027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,6 +1865,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961300172}
   m_CullTransparentMesh: 1
+--- !u!114 &967642040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd81ddf9d4f5b14b9a659ff8cde7ad7, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 634653143}
+  position: {x: 1336, y: -680}
+  ports:
+    keys: []
+    values: []
+  eventGraph: {fileID: 634653143}
+  eventName: sdsdsdsd
+  nodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1070805278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399855581}
   - component: {fileID: 1399855582}
+  - component: {fileID: 1399855583}
   m_Layer: 0
   m_Name: EventSceneGraph
   m_TagString: Untagged
@@ -2129,6 +2153,47 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   graph: {fileID: 634653143}
+--- !u!114 &1399855583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399855579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddb8e2325af7454bb4cc5a7918783d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: events
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.Events.UnityEvent,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &1444747161
 GameObject:
   m_ObjectHideFlags: 0

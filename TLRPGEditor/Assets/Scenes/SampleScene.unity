@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &91964643
+--- !u!114 &355395393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,15 +135,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037e082e62d81244e858cc9fd6e8480a, type: 3}
   m_Name: Dialogue
   m_EditorClassIdentifier: 
-  graph: {fileID: 221095537}
-  position: {x: -88, y: -296}
+  graph: {fileID: 2112457139}
+  position: {x: 280, y: -152}
   ports:
     keys:
     - value
     - result
+    - exit
+    - enter
     values:
     - _fieldName: value
-      _node: {fileID: 91964643}
+      _node: {fileID: 355395393}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -152,7 +154,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: result
-      _node: {fileID: 91964643}
+      _node: {fileID: 355395393}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -160,28 +162,32 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 355395393}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 355395393}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 1274680116}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  enter: 0
+  exit: 0
   x: []
-  end:
-    m_PersistentCalls:
-      m_Calls: []
   value: 0
   result: 0
---- !u!114 &221095537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f7995237c0cb640a623c2c110c49e4, type: 3}
-  m_Name: GameObject-graph
-  m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 833220067}
-  - {fileID: 91964643}
-  - {fileID: 1870815338}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,38 +272,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &833220067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd81ddf9d4f5b14b9a659ff8cde7ad7, type: 3}
-  m_Name: Event
-  m_EditorClassIdentifier: 
-  graph: {fileID: 221095537}
-  position: {x: 344, y: -232}
-  ports:
-    keys: []
-    values: []
-  event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &860344524
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7915171fc13472a40a0162003052d2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graph: {fileID: 221095537}
+  graph: {fileID: 2112457139}
 --- !u!4 &860344526
 Transform:
   m_ObjectHideFlags: 0
@@ -343,7 +317,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1870815338
+--- !u!114 &1274680116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,11 +326,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf048f19fb3ef243a455a39d6e27ea5, type: 3}
-  m_Name: Plot
+  m_Script: {fileID: 11500000, guid: ca7a2185aec105041b6ee77addd50aa5, type: 3}
+  m_Name: Start
   m_EditorClassIdentifier: 
-  graph: {fileID: 221095537}
-  position: {x: 344, y: -296}
+  graph: {fileID: 2112457139}
+  position: {x: 4.773601, y: -168.92992}
   ports:
-    keys: []
-    values: []
+    keys:
+    - exit
+    - enter
+    values:
+    - _fieldName: exit
+      _node: {fileID: 1274680116}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: enter
+        node: {fileID: 355395393}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 1274680116}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  enter: 0
+  exit: 0
+--- !u!114 &2112457139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29be2d5f1b117449813a63e2eb93b74, type: 3}
+  m_Name: GameObject-graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1274680116}
+  - {fileID: 355395393}

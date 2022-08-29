@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Bullet
+  - EnermyBullet
+  - Tag
   - 
   - 
   - 
@@ -40,4 +40,34 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2326936043
+    locked: 0
+  - name: LandEnermy
+    uniqueID: 772248011
+    locked: 0
+  - name: House
+    uniqueID: 4078291327
+    locked: 0
+  - name: Boss
+    uniqueID: 523872897
+    locked: 0
+  - name: Enermy
+    uniqueID: 349656001
+    locked: 0
+  - name: Bullet
+    uniqueID: 3102784723
+    locked: 0
+  - name: Effect
+    uniqueID: 3185619655
+    locked: 0
+  - name: Hero
+    uniqueID: 4195012587
+    locked: 0
+  - name: Light
+    uniqueID: 1381387233
+    locked: 0
+  - name: Tag
+    uniqueID: 549443661
     locked: 0

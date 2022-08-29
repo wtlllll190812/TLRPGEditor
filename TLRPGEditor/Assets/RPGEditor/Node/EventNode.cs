@@ -27,7 +27,7 @@ public class EventNode : RPGNode
 		throw new System.NotImplementedException();
 	}
 
-	public override void Execute()
+	public override void OnEnter()
 	{
 		throw new System.NotImplementedException();
 	}

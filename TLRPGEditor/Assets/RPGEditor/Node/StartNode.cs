@@ -21,7 +21,7 @@ public class StartNode : RPGNode
 		MoveNextNode();
 	}
 
-	public override void Execute()
+	public override void OnEnter()
 	{
 		Debug.Log("RPGNode Start");
 		MoveNext();

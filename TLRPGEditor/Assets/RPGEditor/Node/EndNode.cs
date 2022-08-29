@@ -20,7 +20,7 @@ public class EndNode : RPGNode
 		//MoveNextNode();
 	}
 
-	public override void Execute()
+	public override void OnEnter()
 	{
 		Debug.Log("RPGNode End");
 	}

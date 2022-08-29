@@ -3,12 +3,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[NodeWidth(200)]
+[NodeWidth(500)]
 [NodeTint("#3f6fa0")]//Node颜色
 public class SwitchNode : RPGNode
 {
-	[Input] public string t1;
+	//public new bool exit;
 	[Output(dynamicPortList = true)] public string[] options;
+	public int? result=null;
 
 	protected override void Init() 
 	{
@@ -22,11 +23,19 @@ public class SwitchNode : RPGNode
 
     public override void MoveNext()
     {
-        throw new System.NotImplementedException();
+		if(result!=null)
+        {
+			var node = GetOutputPort("options "+(int)result).Connection?.node as RPGNode;
+			if (node == null) Debug.LogError("NodePort is null");
+			rpgGraph.currentNode = node;
+			ResetNode();
+		}
+        //throw new System.NotImplementedException();
     }
 
-    public override void Execute()
+    public override void OnEnter()
     {
-        throw new System.NotImplementedException();
-    }
+		result = null;
+		//throw new System.NotImplementedException();
+	}
 }

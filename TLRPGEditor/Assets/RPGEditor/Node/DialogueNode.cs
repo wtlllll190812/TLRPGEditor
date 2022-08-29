@@ -35,7 +35,7 @@ public class DialogueNode : RPGNode
 		currentIndex++;
 	}
 
-	public override void Execute()
+	public override void OnEnter()
 	{
 		currentIndex = 0;
 	}

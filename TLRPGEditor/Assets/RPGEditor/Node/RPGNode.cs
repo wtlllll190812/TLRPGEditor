@@ -23,10 +23,10 @@ public abstract class RPGNode : Node
         if (node == null) Debug.LogError("NodePort is null");
         rpgGraph.currentNode = node;
         ResetNode();
-        node.Execute();
+        node.OnEnter();
     }
 
     public abstract void MoveNext();
 
-    public abstract void Execute();
+    public abstract void OnEnter();
 }

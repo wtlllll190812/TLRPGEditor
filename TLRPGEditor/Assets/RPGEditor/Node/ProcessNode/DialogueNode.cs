@@ -2,10 +2,12 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
 [NodeWidth(400)]
 [NodeTint("#3f6fa0")]//Node颜色
+[CreateNodeMenu("Process/Dialogue")]
 public class DialogueNode : ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]
@@ -13,7 +15,7 @@ public class DialogueNode : ProcessNode
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
 
-
+	[MultiLineProperty]
 	public List<string> Dialogues;
 
 	private int currentIndex=0;

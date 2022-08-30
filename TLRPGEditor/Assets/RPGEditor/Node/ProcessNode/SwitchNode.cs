@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 [NodeWidth(500)]
 [NodeTint("#B78352")]
+[CreateNodeMenu("Process/Switch")]
 public class SwitchNode : ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]

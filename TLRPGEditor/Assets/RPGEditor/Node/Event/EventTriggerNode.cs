@@ -1,8 +1,9 @@
 ﻿using XNode;
 using UnityEngine;
-using System.Collections;
+using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
+[CreateNodeMenu("Event/EventTrigger")]
 public class EventTriggerNode : ProcessNode 
 {
 	[Input(backingValue = ShowBackingValue.Never)]
@@ -11,7 +12,16 @@ public class EventTriggerNode : ProcessNode
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
 	
+	[ValueDropdown("PlayerLevel")]
 	public string eventName;
+	public static List<string> PlayerLevel { get {
+			List<string> res = new List<string>();
+			foreach (var item in EventQueue.events.Keys)
+            {
+				res.Add(item);
+            }
+			return res;
+		} }
 
 	protected override void Init()
 	{
@@ -25,12 +35,12 @@ public class EventTriggerNode : ProcessNode
 
 	public override void MoveNext()
 	{
-		EventQueue.instance.InVokeEvent(eventName);
+		EventQueue.InVokeEvent(eventName);
 		MoveNextNode();
 	}
 
 	public override void OnEnter()
 	{
-		
+		MoveNext();
 	}
 }

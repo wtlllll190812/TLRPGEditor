@@ -6,21 +6,27 @@ using System.Collections.Generic;
 
 public class EventQueue : SerializedMonoBehaviour
 {
-    public static EventQueue instance;
-    public Dictionary<string, UnityEvent> events = new Dictionary<string, UnityEvent>();
+    public static Dictionary<string, UnityEvent> events = new Dictionary<string, UnityEvent>();
 
     public void Awake()
     {
-        instance = this;    
+        events.Clear();
     }
 
-    public void AddEvent(string eventName,UnityEvent @event)
+    public static void AddEvent(string eventName,UnityEvent @event)
     {
         events[eventName] = @event;
     }
 
-    public void InVokeEvent(string eventName)
+    public static void InVokeEvent(string eventName)
     {
         events[eventName]?.Invoke();
+    }
+
+    public static UnityEvent FindEvent(string eventName)
+    {
+        if(events.ContainsKey(eventName))
+            return events[eventName];
+        return null;
     }
 }

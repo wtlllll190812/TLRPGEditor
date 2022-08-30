@@ -17,16 +17,14 @@ public class EventNode:ProcessNode
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
 
-	[OnValueChanged("Init")]
 	public string eventName;
-	[OnValueChanged("AddEvent")]
 	public UnityEvent nodeEvent;
 
 	protected override void Init() 
 	{
 		base.Init();
-		if (EventQueue.FindEvent(eventName) != null)
-			nodeEvent = EventQueue.FindEvent(eventName);
+		if (eventName != null)
+			AddEvent();
 	}
 
 	public override object GetValue(NodePort port) 
@@ -45,8 +43,14 @@ public class EventNode:ProcessNode
 		MoveNext();
 	}
 
+	[Button("AddEvent")]
 	public void AddEvent()
     {
-		EventQueue.AddEvent(eventName, nodeEvent);
+		rpgGraph.eventQueue.AddEvent(eventName, nodeEvent);
+	}
+
+    public void OnDestroy()
+    {
+		rpgGraph.eventQueue.AddEvent(eventName, nodeEvent);
 	}
 }

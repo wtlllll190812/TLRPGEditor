@@ -4,27 +4,41 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-public class EventQueue : SerializedMonoBehaviour
+public class EventQueue
 {
-    public static Dictionary<string, UnityEvent> events = new Dictionary<string, UnityEvent>();
+    public Dictionary<string, UnityEvent> events = new Dictionary<string, UnityEvent>();
 
-    public void Awake()
+    public void Reset()
     {
         events.Clear();
     }
 
-    public static void AddEvent(string eventName,UnityEvent @event)
+    public void AddEvent(string eventName, UnityEvent @event)
     {
+        if (eventName == null)
+            return;
         events[eventName] = @event;
     }
 
-    public static void InVokeEvent(string eventName)
+    public void RemoveEvent(string eventName)
     {
+        if (eventName == null)
+            return;
+        if (events.ContainsKey(eventName))
+            events.Remove(eventName);
+    }
+
+    public void InVokeEvent(string eventName)
+    {
+        if (eventName == null)
+            return ;
         events[eventName]?.Invoke();
     }
 
-    public static UnityEvent FindEvent(string eventName)
+    public UnityEvent FindEvent(string eventName)
     {
+        if(eventName==null)
+            return null;
         if(events.ContainsKey(eventName))
             return events[eventName];
         return null;

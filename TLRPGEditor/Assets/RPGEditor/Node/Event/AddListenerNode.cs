@@ -1,38 +1,46 @@
 ﻿using XNode;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.Events;
+using Sirenix.Serialization;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-[NodeWidth(200)]
+[NodeWidth(400)]
 [NodeTint("#942424")]//Node颜色
-[CreateNodeMenu("Event/EventTrigger")]
 [System.Serializable]
-public class EventTriggerNode : ProcessNode 
+[CreateNodeMenu("Event/AddListener")]
+public class AddListenerNode : ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]
 	public bool enter;
-
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
-	
+
+	[OnValueChanged("Init")]
 	[ValueDropdown("eventList")]
 	public string eventName;
-	public List<string> eventList 
+	public UnityEvent newEvent;
+	public List<string> eventList
 	{
-		get 
+		get
 		{
 			List<string> res = new List<string>();
 			foreach (var item in rpgGraph.eventQueue.events.Keys)
-            {
+			{
 				res.Add(item);
-            }
+			}
 			return res;
-		} 
+		}
 	}
+	
+	private UnityEvent nodeEvent;
 
 	protected override void Init()
 	{
 		base.Init();
+		if (rpgGraph.eventQueue.FindEvent(eventName) != null)
+			nodeEvent = rpgGraph.eventQueue.FindEvent(eventName);
 	}
 
 	public override object GetValue(NodePort port)
@@ -42,12 +50,17 @@ public class EventTriggerNode : ProcessNode
 
 	public override void MoveNext()
 	{
-		rpgGraph.eventQueue.InVokeEvent(eventName);
 		MoveNextNode();
+	}
+
+	public void AddNewListener()
+    {
+		newEvent.Invoke();
 	}
 
 	public override void OnEnter()
 	{
+		nodeEvent?.AddListener(AddNewListener);
 		MoveNext();
 	}
 }

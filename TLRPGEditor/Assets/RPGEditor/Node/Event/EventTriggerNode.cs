@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 [NodeWidth(200)]
 [NodeTint("#942424")]//Node颜色
-[CreateNodeMenu("Event/EventTrigger")]
+[CreateNodeMenu("事件/触发事件")]
 [System.Serializable]
 public class EventTriggerNode : ProcessNode 
 {

@@ -7,10 +7,10 @@ using System.Collections.Generic;
 public class ProcessNodeGraph : NodeGraph
 {
     public EventQueue eventQueue=new EventQueue();
-	private StartNode startNode;
+	private ProcessNode startNode;
 	public ProcessNode currentNode;
 
-	public void SetStartNode(StartNode node)
+	public void SetStartNode(ProcessNode node)
 	{
 		startNode = node;
 	}
@@ -25,6 +25,5 @@ public class ProcessNodeGraph : NodeGraph
 	public void MoveNext()
 	{
 		currentNode.MoveNext();
-		Debug.Log(eventQueue.events.Count);
 	}
 }

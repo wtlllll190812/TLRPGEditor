@@ -7,8 +7,8 @@ using System.Collections.Generic;
 
 [NodeWidth(400)]
 [NodeTint("#3f6fa0")]//Node颜色
-[CreateNodeMenu("Process/Dialogue")]
-public class DialogueNode : ProcessNode
+[CreateNodeMenu("流程/语句")]
+public class SentenceNode : ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]
 	public bool enter;

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 [NodeWidth(400)]
 [NodeTint("#942424")]//Node颜色
 [System.Serializable]
-[CreateNodeMenu("Event/AddEvent")]
+[CreateNodeMenu("事件/添加事件")]
 public class EventNode:ProcessNode
 {
 	[Input(backingValue = ShowBackingValue.Never)]

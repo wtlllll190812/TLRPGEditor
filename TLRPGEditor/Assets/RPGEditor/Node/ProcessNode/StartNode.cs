@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 [NodeWidth(100)]
 [NodeTint("#2B714C")]
-[CreateNodeMenu("Process/Start")]
+[CreateNodeMenu("流程/开始")]
 public class StartNode : ProcessNode
 {
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]

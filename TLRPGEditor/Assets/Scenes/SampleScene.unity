@@ -312,7 +312,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &292404777
 MonoBehaviour:
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2328, y: -616}
+  position: {x: 2648, y: -600}
   ports:
     keys:
     - enter
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 40, y: -424}
+  position: {x: -312, y: -472}
   ports:
     keys:
     - exit
@@ -878,7 +878,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &618345703
 MonoBehaviour:
@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 760, y: -488}
+  position: {x: 264, y: -456}
   ports:
     keys:
     - enter
@@ -1023,7 +1023,7 @@ RectTransform:
   - {fileID: 499778273}
   - {fileID: 1806054071}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1118,6 +1118,60 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!1 &781470695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781470696}
+  - component: {fileID: 781470697}
+  m_Layer: 0
+  m_Name: NPCEditor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &781470696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781470695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 468.60812, y: 286.11667, z: 3.0109763}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781470697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781470695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ae6c5a96df0fd4496f1bfee310bd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  npcs: []
 --- !u!114 &793420420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,7 +1185,7 @@ MonoBehaviour:
   m_Name: Event Trigger
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2792, y: -248}
+  position: {x: 3112, y: -168}
   ports:
     keys:
     - enter
@@ -1177,7 +1231,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2328, y: -408}
+  position: {x: 2648, y: -392}
   ports:
     keys:
     - enter
@@ -1349,7 +1403,7 @@ GameObject:
   - component: {fileID: 860344526}
   - component: {fileID: 860344527}
   m_Layer: 0
-  m_Name: NPCSceneGraph
+  m_Name: ProcessSceneGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1392,8 +1446,8 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   graph: {fileID: 1985154974}
-  TMPro: {fileID: 868730484}
-  options: {fileID: 499778274}
+  dialogueText: {fileID: 868730484}
+  dialogueoptions: {fileID: 499778274}
   onDialogueStart:
     m_PersistentCalls:
       m_Calls:
@@ -2017,7 +2071,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 200, y: -472}
+  position: {x: -168, y: -472}
   ports:
     keys:
     - enter
@@ -2348,7 +2402,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 3112, y: -392}
+  position: {x: 3432, y: -376}
   ports:
     keys:
     - enter
@@ -2422,7 +2476,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2328, y: -200}
+  position: {x: 2648, y: -184}
   ports:
     keys:
     - enter
@@ -2969,7 +3023,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 1852.0692, y: -155.46552}
+  position: {x: 2152, y: -424}
   ports:
     keys:
     - enter
@@ -3030,7 +3084,7 @@ MonoBehaviour:
   m_Name: Add Listener
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 904, y: -168}
+  position: {x: 696, y: -472}
   ports:
     keys:
     - enter

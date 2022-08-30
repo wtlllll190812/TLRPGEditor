@@ -31,6 +31,7 @@ public class SwitchNode : ProcessNode
 			var node = GetOutputPort("options "+(int)result).Connection?.node as ProcessNode;
 			if (node == null) Debug.LogError("NodePort is null");
 			rpgGraph.currentNode = node;
+			node.OnEnter();
 			ResetNode();
 		}
     }

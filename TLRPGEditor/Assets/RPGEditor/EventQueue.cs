@@ -1,22 +1,19 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
-using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
 public class EventQueue
 {
     public Dictionary<string, UnityEvent> events = new Dictionary<string, UnityEvent>();
 
-    public void Reset()
-    {
-        events.Clear();
-    }
-
     public void AddEvent(string eventName, UnityEvent @event)
     {
         if (eventName == null)
+        {
             return;
+        }
+        Debug.Log("sdssdsdd");
         events[eventName] = @event;
     }
 

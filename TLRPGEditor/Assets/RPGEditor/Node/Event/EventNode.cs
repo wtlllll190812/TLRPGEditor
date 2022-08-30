@@ -48,9 +48,4 @@ public class EventNode:ProcessNode
     {
 		rpgGraph.eventQueue.AddEvent(eventName, nodeEvent);
 	}
-
-    public void OnDestroy()
-    {
-		rpgGraph.eventQueue.AddEvent(eventName, nodeEvent);
-	}
 }

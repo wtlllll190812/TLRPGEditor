@@ -246,7 +246,10 @@ MonoBehaviour:
       _node: {fileID: 161933086}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: enter
+        node: {fileID: 292404777}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -255,7 +258,10 @@ MonoBehaviour:
       _node: {fileID: 161933086}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: enter
+        node: {fileID: 2120168958}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -264,7 +270,10 @@ MonoBehaviour:
       _node: {fileID: 161933086}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: enter
+        node: {fileID: 1651343607}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -318,7 +327,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 1832, y: -616}
+  position: {x: 2328, y: -616}
   ports:
     keys:
     - enter
@@ -328,7 +337,10 @@ MonoBehaviour:
       _node: {fileID: 292404777}
       _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: options 0
+        node: {fileID: 161933086}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1119,7 +1131,7 @@ MonoBehaviour:
   m_Name: Event Trigger
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2296, y: -248}
+  position: {x: 2792, y: -248}
   ports:
     keys:
     - enter
@@ -1165,7 +1177,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 1832, y: -408}
+  position: {x: 2328, y: -408}
   ports:
     keys:
     - enter
@@ -1175,7 +1187,10 @@ MonoBehaviour:
       _node: {fileID: 799139085}
       _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: exit
+        node: {fileID: 2120168958}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2333,7 +2348,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2616, y: -392}
+  position: {x: 3112, y: -392}
   ports:
     keys:
     - enter
@@ -2407,7 +2422,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 1832, y: -200}
+  position: {x: 2328, y: -200}
   ports:
     keys:
     - enter
@@ -2417,7 +2432,10 @@ MonoBehaviour:
       _node: {fileID: 1651343607}
       _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: options 2
+        node: {fileID: 161933086}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2936,7 +2954,69 @@ MonoBehaviour:
   - {fileID: 793420420}
   - {fileID: 1177663025}
   - {fileID: 2142878570}
+  - {fileID: 2120168958}
   currentNode: {fileID: 0}
+--- !u!114 &2120168958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd81ddf9d4f5b14b9a659ff8cde7ad7, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1985154974}
+  position: {x: 1852.0692, y: -155.46552}
+  ports:
+    keys:
+    - enter
+    - exit
+    values:
+    - _fieldName: enter
+      _node: {fileID: 2120168958}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: options 1
+        node: {fileID: 161933086}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 2120168958}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: enter
+        node: {fileID: 799139085}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 2
+      _dynamic: 0
+  enter: 0
+  exit: 0
+  eventName: sdsadas
+  nodeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 685460027}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2142878570
 MonoBehaviour:
   m_ObjectHideFlags: 0

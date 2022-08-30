@@ -6,5 +6,11 @@ using System.Collections.Generic;
 
 public class NPCSceneGraph:SerializedMonoBehaviour
 {
+	public static NPCSceneGraph Instance;
 	public List<NPCNodeGraph> npcs;
+
+    public void Awake()
+    {
+        Instance = this; 
+    }
 }

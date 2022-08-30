@@ -1171,7 +1171,8 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  npcs: []
+  npcs:
+  - {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
 --- !u!114 &793420420
 MonoBehaviour:
   m_ObjectHideFlags: 0

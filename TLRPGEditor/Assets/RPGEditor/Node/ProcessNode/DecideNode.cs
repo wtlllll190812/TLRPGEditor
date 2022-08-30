@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 [NodeWidth(500)]
 [NodeTint("#B78352")]
-[CreateNodeMenu("Process/Decide")]
+[CreateNodeMenu("流程/判断")]
 public class DecideNode : ProcessNode
 {
     [Input(backingValue = ShowBackingValue.Never, dynamicPortList = true)]

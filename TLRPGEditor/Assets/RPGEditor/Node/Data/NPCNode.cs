@@ -5,8 +5,8 @@ using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
 [NodeWidth(300)]
-[NodeTint("#B78352")]
-[CreateNodeMenu("Process/NPCNode")]
+[NodeTint("#3f6fa0")]
+[CreateNodeMenu("NPC/NPC配置")]
 public class NPCNode : ProcessNode 
 {
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
@@ -28,9 +28,11 @@ public class NPCNode : ProcessNode
 
     public override void MoveNext()
     {
+		MoveNextNode();
     }
 
     public override void OnEnter()
     {
+		MoveNext();
     }
 }

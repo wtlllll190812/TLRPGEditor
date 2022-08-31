@@ -359,6 +359,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
+  npc: {fileID: 0}
+  npcSprite: {fileID: 0}
   Dialogues:
   - ?????
 --- !u!1 &318947978
@@ -925,6 +927,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
+  npc: {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
+  npcSprite: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
   Dialogues:
   - "\u8BF7\u95EE\u4E00\u52A0\u4E00\u7B49\u4E8E\u51E0"
 --- !u!1 &685460027
@@ -1171,8 +1175,9 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  npcs:
+  npcNodes:
   - {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
+  - {fileID: 11400000, guid: e372811e2c0f5ee44b941fc5e17d8e43, type: 2}
 --- !u!114 &793420420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,6 +1269,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
+  npc: {fileID: 0}
+  npcSprite: {fileID: 0}
   Dialogues:
   - "\u786E\u5B9E"
 --- !u!1 &852843083
@@ -2509,6 +2516,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
+  npc: {fileID: 0}
+  npcSprite: {fileID: 0}
   Dialogues:
   - "\u5176\u5B9E\u6211\u89C9\u5F97\u662F\u56DB"
 --- !u!1 &1659436246

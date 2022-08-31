@@ -11,15 +11,13 @@ public class SentenceNodeEditor : NodeEditor
 
     public override void OnBodyGUI()
     {
-        serializedObject.Update();
-        //base.OnBodyGUI();
+        base.OnBodyGUI();
 
-        if (simpleNode == null) simpleNode = target as SentenceNode;
-        //EditorGUILayout.PropertyField(serializedObject.FindProperty("npcSprite"));
-        NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("enter"));
-        NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("exit"));
-        EditorGUILayout.LabelField(new GUIContent(simpleNode.npcSprite));
-        //GUILayout.Box(simpleNode.npcSprite);
+        //if (simpleNode == null) simpleNode = target as SentenceNode;
+        //NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("npc"));
+        //NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("exit"));
+        //EditorGUILayout.RectField(new GUIContent(simpleNode.npcSprite),);
+        ////GUILayout.Box(simpleNode.npcSprite);
         serializedObject.ApplyModifiedProperties();
     }
 }

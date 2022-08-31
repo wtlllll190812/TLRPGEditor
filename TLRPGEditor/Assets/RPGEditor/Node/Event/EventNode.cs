@@ -46,6 +46,6 @@ public class EventNode:ProcessNode
 	[Button("AddEvent")]
 	public void AddEvent()
     {
-		rpgGraph.eventQueue.AddEvent(eventName, nodeEvent);
+		ProcessNodeGraph.eventQueue.AddEvent(eventName, nodeEvent);
 	}
 }

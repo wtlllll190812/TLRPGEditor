@@ -1,21 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ebfdfd13cafbd74086a95c08573656b, type: 3}
-  m_Name: wtlllll
-  m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 8018499319439134590}
-  currentNode: {fileID: 0}
---- !u!114 &8018499319439134590
+--- !u!114 &-3945289276856804505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,13 +13,13 @@ MonoBehaviour:
   m_Name: NPC
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2312, y: -440}
+  position: {x: 2309.0693, y: -414.2506}
   ports:
     keys:
     - exit
     values:
     - _fieldName: exit
-      _node: {fileID: 8018499319439134590}
+      _node: {fileID: -3945289276856804505}
       _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -44,5 +29,20 @@ MonoBehaviour:
       _dynamic: 0
   npcGraph: {fileID: 11400000}
   exit: 0
-  npcName: sdsdsd
-  npcTex: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  npcName: zhanbi
+  npcTex: {fileID: 28268798066460806, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebfdfd13cafbd74086a95c08573656b, type: 3}
+  m_Name: zhanbi
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -3945289276856804505}
+  currentNode: {fileID: 0}

@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
+using System.Reflection;
+using Sirenix.OdinInspector;
+using System.Collections.Generic;
 
 namespace XNode {
     [Serializable]

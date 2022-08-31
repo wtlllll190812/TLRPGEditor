@@ -26,7 +26,7 @@ public class AddListenerNode : ProcessNode
 		get
 		{
 			List<string> res = new List<string>();
-			foreach (var item in rpgGraph.eventQueue.events.Keys)
+			foreach (var item in ProcessNodeGraph.eventQueue.events.Keys)
 			{
 				res.Add(item);
 			}
@@ -39,8 +39,8 @@ public class AddListenerNode : ProcessNode
 	protected override void Init()
 	{
 		base.Init();
-		if (rpgGraph.eventQueue.FindEvent(eventName) != null)
-			nodeEvent = rpgGraph.eventQueue.FindEvent(eventName);
+		if (ProcessNodeGraph.eventQueue.FindEvent(eventName) != null)
+			nodeEvent = ProcessNodeGraph.eventQueue.FindEvent(eventName);
 	}
 
 	public override object GetValue(NodePort port)

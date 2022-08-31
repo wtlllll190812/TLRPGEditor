@@ -6,7 +6,7 @@ using System.Collections.Generic;
 [CreateAssetMenu]
 public class ProcessNodeGraph : NodeGraph
 {
-    public EventQueue eventQueue=new EventQueue();
+    public static EventQueue eventQueue=new EventQueue();
 	private ProcessNode startNode;
 	public ProcessNode currentNode;
 

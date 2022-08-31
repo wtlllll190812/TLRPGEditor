@@ -9,16 +9,19 @@ using System.Collections.Generic;
 [CreateNodeMenu("NPC/NPC配置")]
 public class NPCNode : ProcessNode 
 {
+	[HideInInspector]public NPCNodeGraph npcGraph;
+
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
 
 	public string npcName;
 	[PreviewField]
-	public Sprite npcSprite;
+	public Texture npcTex;
 
 	protected override void Init() {
 		base.Init();
-		rpgGraph.SetStartNode(this);
+		npcGraph = graph as NPCNodeGraph;
+		npcGraph.SetNPCNode(this);
 	}
 
 	// Return the correct value of an output port when requested

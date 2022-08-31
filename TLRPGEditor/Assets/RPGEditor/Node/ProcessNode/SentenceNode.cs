@@ -15,11 +15,26 @@ public class SentenceNode : ProcessNode
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
 
+	[ValueDropdown("NpcList")]
+	[OnValueChanged("OnNpcChange")]
+	public NPCNodeGraph npc;
+	[PreviewField]
+	public Texture npcSprite;
+
 	[MultiLineProperty]
 	public List<string> Dialogues;
-
+	
+	private List<NPCNodeGraph> NpcList
+    { 
+		get { return NPCNodeGraph.npcNodes; }
+	}
 	private int currentIndex=0;
 	
+	public void OnNpcChange()
+    {
+		npcSprite = npc.npcNode.npcTex;
+	}
+
 	protected override void Init()
 	{
 		base.Init();

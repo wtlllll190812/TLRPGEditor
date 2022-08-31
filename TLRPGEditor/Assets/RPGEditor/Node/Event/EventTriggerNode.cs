@@ -22,7 +22,7 @@ public class EventTriggerNode : ProcessNode
 		get 
 		{
 			List<string> res = new List<string>();
-			foreach (var item in rpgGraph.eventQueue.events.Keys)
+			foreach (var item in ProcessNodeGraph.eventQueue.events.Keys)
             {
 				res.Add(item);
             }
@@ -42,7 +42,7 @@ public class EventTriggerNode : ProcessNode
 
 	public override void MoveNext()
 	{
-		rpgGraph.eventQueue.InVokeEvent(eventName);
+		ProcessNodeGraph.eventQueue.InVokeEvent(eventName);
 		MoveNextNode();
 	}
 

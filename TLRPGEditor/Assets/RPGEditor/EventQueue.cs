@@ -13,7 +13,6 @@ public class EventQueue
         {
             return;
         }
-        Debug.Log("sdssdsdd");
         events[eventName] = @event;
     }
 

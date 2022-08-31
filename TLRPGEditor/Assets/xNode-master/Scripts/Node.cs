@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace XNode {
     /// <summary>
@@ -283,6 +283,22 @@ namespace XNode {
                 this.connectionType = connectionType;
                 this.dynamicPortList = dynamicPortList;
                 this.typeConstraint = typeConstraint;
+            }
+        }
+
+        /// <summary>
+        /// Add custom title for node
+        /// </summary>
+        [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+        public class NodeTitleAttribute : Attribute
+        {
+            public string title;
+            public bool allowCustomName;
+            // allowCustomName为是否显示Node的name
+            public NodeTitleAttribute(string title, bool allowCustomName = true)
+            {
+                this.title = title;
+                this.allowCustomName = allowCustomName;
             }
         }
 

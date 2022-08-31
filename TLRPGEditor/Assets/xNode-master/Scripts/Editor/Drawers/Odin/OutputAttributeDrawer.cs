@@ -37,9 +37,9 @@ namespace XNodeEditor {
 					if (labelWidth != null)
 						GUIHelper.PushLabelWidth(labelWidth.Width);
 
-					NodeEditorGUILayout.PropertyField(portPropoerty, label == null ? GUIContent.none : label, true, GUILayout.MinWidth(30));
+                    NodeEditorGUILayout.PropertyField(portPropoerty, label == null ? GUIContent.none : label,true, GUILayout.MinWidth(30));
 
-					if (labelWidth != null)
+                    if (labelWidth != null)
 						GUIHelper.PopLabelWidth();
 				}
 			}

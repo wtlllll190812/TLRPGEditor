@@ -1,8 +1,11 @@
+using XNode;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using System.Reflection;
+using System.Collections.Generic;
+
 #if ODIN_INSPECTOR
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities;
@@ -13,7 +16,8 @@ namespace XNodeEditor {
     /// <summary> Base class to derive custom Node editors from. Use this to create your own custom inspectors and editors for your nodes. </summary>
     [CustomNodeEditor(typeof(XNode.Node))]
     public class NodeEditor : XNodeEditor.Internal.NodeEditorBase<NodeEditor, NodeEditor.CustomNodeEditorAttribute, XNode.Node> {
-
+        private string title;
+        private bool allowCustomName;
         /// <summary> Fires every whenever a node was modified through the editor </summary>
         public static Action<XNode.Node> onUpdateNode;
         public readonly static Dictionary<XNode.NodePort, Vector2> portPositions = new Dictionary<XNode.NodePort, Vector2>();
@@ -21,9 +25,27 @@ namespace XNodeEditor {
 #if ODIN_INSPECTOR
         protected internal static bool inNodeEditor = false;
 #endif
+        // 获取自定义的标题Attribute
+        public override void OnCreate()
+        {
+            var nodeTitleAttribute = target.GetType().GetCustomAttribute<Node.NodeTitleAttribute>();
+            if (nodeTitleAttribute != null)
+            {
+                title = nodeTitleAttribute.title;
+                allowCustomName = nodeTitleAttribute.allowCustomName;
+            }
+            if (string.IsNullOrEmpty(title))
+                title = target.GetType().Name;
+        }
 
         public virtual void OnHeaderGUI() {
-            GUILayout.Label(target.name, NodeEditorResources.styles.nodeHeader, GUILayout.Height(30));
+            // 绘制自定义的标题头
+            if (allowCustomName)
+                GUILayout.Label($"{title} ({target.name})",
+                    NodeEditorResources.styles.nodeHeader,
+                    GUILayout.Height(30));
+            else
+                GUILayout.Label(title, NodeEditorResources.styles.nodeHeader, GUILayout.Height(30));
         }
 
         /// <summary> Draws standard field editors for all public fields </summary>

@@ -2516,8 +2516,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
-  npc: {fileID: 0}
-  npcSprite: {fileID: 0}
+  npc: {fileID: 11400000, guid: e372811e2c0f5ee44b941fc5e17d8e43, type: 2}
+  npcSprite: {fileID: 28268798066460806, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   Dialogues:
   - "\u5176\u5B9E\u6211\u89C9\u5F97\u662F\u56DB"
 --- !u!1 &1659436246

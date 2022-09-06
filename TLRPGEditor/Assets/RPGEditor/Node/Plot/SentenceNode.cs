@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-[NodeWidth(400)]
+[NodeWidth(300)]
 [NodeTint("#3f6fa0")]//Node颜色
 [CreateNodeMenu("流程/语句")]
 [NodeTitle("语句")]
@@ -16,13 +16,13 @@ public class SentenceNode : ProcessNode
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
 
-	[HorizontalGroup("NpcList", 0.5f, LabelWidth = 40)]
+	[HorizontalGroup("NpcList", 0.8f, LabelWidth = 40)]
 	[ValueDropdown("NpcList")]
 	[OnValueChanged("OnNpcChange")]
 	public NPCNodeGraph npc;
 
 	[HorizontalGroup("NpcList", 0.5f)]
-	[PreviewField(80)][HideLabel]
+	[PreviewField(80)][HideLabel][ReadOnly]
 	public Texture npcSprite;
 
 	[MultiLineProperty]

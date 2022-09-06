@@ -7,11 +7,14 @@ using System.Collections.Generic;
 [NodeTint("#3fa063")]//Node颜色
 public class PlotNode : ProcessNode
 {
+	public string plotDes;
+	[Input(backingValue = ShowBackingValue.Never)]
+	public bool enter;
+	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
+	public bool exit;
 
-	// Use this for initialization
 	protected override void Init() {
 		base.Init();
-		
 	}
 
 	// Return the correct value of an output port when requested

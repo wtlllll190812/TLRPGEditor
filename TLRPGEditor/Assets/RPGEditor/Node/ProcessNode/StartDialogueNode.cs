@@ -3,13 +3,16 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[NodeWidth(100)]
+[NodeWidth(200)]
 [NodeTint("#2B714C")]
 [CreateNodeMenu("流程/开始")]
-public class StartNode : ProcessNode
+[NodeTitle("对话开始")]
+public class StartDialogueNode : ProcessNode
 {
 	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 	public bool exit;
+
+	public string diaogueName;
 
 	protected override void Init()
 	{

@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: Switch
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 1240, y: -472}
+  position: {x: 520, y: 216}
   ports:
     keys:
     - enter
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2648, y: -600}
+  position: {x: 1704, y: -24}
   ports:
     keys:
     - enter
@@ -359,8 +359,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
-  npc: {fileID: 0}
-  npcSprite: {fileID: 0}
+  npc: {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
+  npcSprite: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
   Dialogues:
   - ?????
 --- !u!1 &318947978
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: -312, y: -472}
+  position: {x: -984, y: 296}
   ports:
     keys:
     - exit
@@ -470,6 +470,7 @@ MonoBehaviour:
       _typeConstraint: 2
       _dynamic: 0
   exit: 0
+  diaogueName: 
 --- !u!1 &499778272
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +896,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 264, y: -456}
+  position: {x: -312, y: 200}
   ports:
     keys:
     - enter
@@ -927,8 +928,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
-  npc: {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
-  npcSprite: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  npc: {fileID: 11400000, guid: e372811e2c0f5ee44b941fc5e17d8e43, type: 2}
+  npcSprite: {fileID: 28268798066460806, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   Dialogues:
   - "\u8BF7\u95EE\u4E00\u52A0\u4E00\u7B49\u4E8E\u51E0"
 --- !u!1 &685460027
@@ -1178,6 +1179,8 @@ MonoBehaviour:
   npcNodes:
   - {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
   - {fileID: 11400000, guid: e372811e2c0f5ee44b941fc5e17d8e43, type: 2}
+  - {fileID: 11400000, guid: ae4e45072609bcb4887819af59274412, type: 2}
+  - {fileID: 11400000, guid: 735e95c1bdc17e54ba9ec52c60ab1e8c, type: 2}
 --- !u!114 &793420420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1191,7 +1194,7 @@ MonoBehaviour:
   m_Name: Event Trigger
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 3112, y: -168}
+  position: {x: 2088, y: 520}
   ports:
     keys:
     - enter
@@ -1237,7 +1240,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2648, y: -392}
+  position: {x: 1704, y: 232}
   ports:
     keys:
     - enter
@@ -1269,8 +1272,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
-  npc: {fileID: 0}
-  npcSprite: {fileID: 0}
+  npc: {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
+  npcSprite: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
   Dialogues:
   - "\u786E\u5B9E"
 --- !u!1 &852843083
@@ -2079,7 +2082,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: -168, y: -472}
+  position: {x: -728, y: 200}
   ports:
     keys:
     - enter
@@ -2115,7 +2118,7 @@ MonoBehaviour:
   nodeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 200509041}
+      - m_Target: {fileID: 604523029}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2410,7 +2413,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 3432, y: -376}
+  position: {x: 2536, y: 72}
   ports:
     keys:
     - enter
@@ -2484,7 +2487,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2648, y: -184}
+  position: {x: 1704, y: 504}
   ports:
     keys:
     - enter
@@ -2516,8 +2519,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
-  npc: {fileID: 11400000, guid: e372811e2c0f5ee44b941fc5e17d8e43, type: 2}
-  npcSprite: {fileID: 28268798066460806, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  npc: {fileID: 11400000, guid: 2653c45c992de8b449e25613c84add06, type: 2}
+  npcSprite: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
   Dialogues:
   - "\u5176\u5B9E\u6211\u89C9\u5F97\u662F\u56DB"
 --- !u!1 &1659436246
@@ -3033,7 +3036,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 2152, y: -424}
+  position: {x: 1224, y: 280}
   ports:
     keys:
     - enter
@@ -3094,7 +3097,7 @@ MonoBehaviour:
   m_Name: Add Listener
   m_EditorClassIdentifier: 
   graph: {fileID: 1985154974}
-  position: {x: 696, y: -472}
+  position: {x: 72, y: 200}
   ports:
     keys:
     - enter
@@ -3137,6 +3140,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

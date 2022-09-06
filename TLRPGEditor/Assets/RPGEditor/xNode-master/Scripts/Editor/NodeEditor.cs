@@ -41,7 +41,7 @@ namespace XNodeEditor {
         public virtual void OnHeaderGUI() {
             // 绘制自定义的标题头
             if (allowCustomName)
-                GUILayout.Label($"{title} ({target.name})",
+                GUILayout.Label($"{title}",
                     NodeEditorResources.styles.nodeHeader,
                     GUILayout.Height(30));
             else

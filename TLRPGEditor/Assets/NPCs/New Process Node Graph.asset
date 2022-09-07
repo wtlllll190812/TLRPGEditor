@@ -42,8 +42,8 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
-  npc: {fileID: 0}
-  npcSprite: {fileID: 0}
+  npc: {fileID: 11400000, guid: ae4e45072609bcb4887819af59274412, type: 2}
+  npcSprite: {fileID: 2800000, guid: 2267efa6e1e349348ae0b28fb659a6e2, type: 3}
   Dialogues: []
 --- !u!114 &-1867394385267223112
 MonoBehaviour:
@@ -77,6 +77,8 @@ MonoBehaviour:
       _dynamic: 0
   exit: 0
   diaogueName: tesfdsfds
+  npc: {fileID: 11400000, guid: ae4e45072609bcb4887819af59274412, type: 2}
+  npcSprite: {fileID: 2800000, guid: 2267efa6e1e349348ae0b28fb659a6e2, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

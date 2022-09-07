@@ -9,7 +9,6 @@ namespace TLRPGEditor
 	public class ProcessNodeGraph : NodeGraph
 	{
 		public static EventQueue eventQueue = new EventQueue();
-		public static Dictionary<string, ProcessNodeGraph> ProcessNodes = new Dictionary<string, ProcessNodeGraph>();
         private ProcessNode startNode;
 		public ProcessNode currentNode;
 

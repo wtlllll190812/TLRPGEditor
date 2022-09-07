@@ -139,7 +139,7 @@ MonoBehaviour:
       _dynamic: 0
   enter: 0
   exit: 0
-  eventName: 
+  eventName: dfsdf
   newEvent:
     m_PersistentCalls:
       m_Calls:

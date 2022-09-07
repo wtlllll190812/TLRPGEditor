@@ -25,7 +25,7 @@ namespace TLRPGEditor
             get
             {
                 List<string> res = new List<string>();
-                foreach (var item in ProcessNodeGraph.ProcessNodes.Keys)
+                foreach (var item in NPCNodeGraph.dialogues.Keys)
                 {
                     res.Add(item);
                 }

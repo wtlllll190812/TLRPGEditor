@@ -16,7 +16,25 @@ namespace TLRPGEditor
 		public bool exit;
 
 		public string diaogueName;
+		[HorizontalGroup("NpcList", 0.8f, LabelWidth = 40)]
+		[ValueDropdown("NpcList")]
+		[OnValueChanged("OnNpcChange")]
+		public NPCNodeGraph npc;
 
+		[HorizontalGroup("NpcList", 0.5f)]
+		[PreviewField(80)]
+		[HideLabel]
+		[ReadOnly]
+		public Texture npcSprite;
+
+		private List<NPCNodeGraph> NpcList
+		{
+			get { return NPCNodeGraph.npcNodes; }
+		}
+		public void OnNpcChange()
+		{
+			npcSprite = npc.npcNode.npcTex;
+		}
 		protected override void Init()
 		{
 			base.Init();
@@ -42,7 +60,7 @@ namespace TLRPGEditor
 		[Button("AddDialogue")]
 		public void AddDialogue()
 		{
-			ProcessNodeGraph.ProcessNodes.Add(diaogueName, rpgGraph);
+			NPCNodeGraph.dialogues.Add(diaogueName, rpgGraph as DialogueNodeGraph);
 		}
 	}
 }

@@ -8,8 +8,9 @@ using System.Collections.Generic;
 
 namespace TLRPGEditor
 {
-    public class ProcessSceneGraph : SceneGraph<ProcessNodeGraph>
+    public class NpcHandler:SerializedMonoBehaviour
     {
+        public NPCNodeGraph npcNode;
         public TMP_Text dialogueText;
         public TMP_Dropdown dialogueoptions;
 
@@ -25,14 +26,14 @@ namespace TLRPGEditor
 
         public void MoveNext()
         {
-            graph.MoveNext();
+            npcNode.currentDialague.MoveNext();
             Execute();
         }
 
         public void GraphStart()
         {
             onDialogueStart?.Invoke();
-            graph.Start();
+            npcNode.currentDialague.Start();
             Execute();
         }
 
@@ -43,19 +44,19 @@ namespace TLRPGEditor
 
         public void Execute()
         {
-            if (graph.currentNode is SentenceNode)
+            if (npcNode.currentDialague.currentNode is SentenceNode)
             {
-                var node = graph.currentNode as SentenceNode;
+                var node = npcNode.currentDialague.currentNode as SentenceNode;
                 dialogueText.text = node.GetDialogue();
             }
-            else if (graph.currentNode is EndNode)
+            else if (npcNode.currentDialague.currentNode is EndNode)
             {
                 GraphEnd();
             }
-            else if (graph.currentNode is SwitchNode)
+            else if (npcNode.currentDialague.currentNode is SwitchNode)
             {
                 dialogueoptions.options.Clear();
-                var node = graph.currentNode as SwitchNode;
+                var node = npcNode.currentDialague.currentNode as SwitchNode;
                 foreach (var item in node.options)
                 {
                     dialogueoptions.options.Add(new TMP_Dropdown.OptionData(item));
@@ -79,11 +80,11 @@ namespace TLRPGEditor
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
-                graph.MoveNext();
+                npcNode.currentDialague.MoveNext();
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
-                graph.Start();
+                npcNode.currentDialague.Start();
             }
         }
     }

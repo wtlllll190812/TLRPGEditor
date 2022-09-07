@@ -11,8 +11,9 @@ namespace TLRPGEditor
     public class NPCNodeGraph : ProcessNodeGraph
     {
         public static List<NPCNodeGraph> npcNodes = new List<NPCNodeGraph>();
+		public static Dictionary<string, DialogueNodeGraph> dialogues = new Dictionary<string, DialogueNodeGraph>();
         [NonSerialized] public NPCNode npcNode;
-
+        public DialogueNodeGraph currentDialague;
         public NPCNodeGraph()
         {
             npcNodes.Add(this);

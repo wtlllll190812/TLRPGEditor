@@ -3,27 +3,31 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu]
-public class ProcessNodeGraph : NodeGraph
+namespace TLRPGEditor
 {
-    public static EventQueue eventQueue=new EventQueue();
-	private ProcessNode startNode;
-	public ProcessNode currentNode;
-
-	public void SetStartNode(ProcessNode node)
+	[CreateAssetMenu]
+	public class ProcessNodeGraph : NodeGraph
 	{
-		startNode = node;
-	}
+		public static EventQueue eventQueue = new EventQueue();
+		public static Dictionary<string, ProcessNodeGraph> ProcessNodes = new Dictionary<string, ProcessNodeGraph>();
+        private ProcessNode startNode;
+		public ProcessNode currentNode;
 
-	public void Start()
-	{
-		eventQueue = new EventQueue();
-		startNode.OnEnter();
-		Debug.Log("start");
-	}
+		public void SetStartNode(ProcessNode node)
+		{
+			startNode = node;
+		}
 
-	public void MoveNext()
-	{
-		currentNode.MoveNext();
+		public void Start()
+		{
+			eventQueue = new EventQueue();
+			startNode.OnEnter();
+			Debug.Log("start");
+		}
+
+		public void MoveNext()
+		{
+			currentNode.MoveNext();
+		}
 	}
 }

@@ -6,61 +6,64 @@ using Sirenix.Serialization;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-[NodeWidth(400)]
-[NodeTint("#942424")]//Node颜色
-[System.Serializable]
-[CreateNodeMenu("事件/为事件添加行为")]
-public class AddListenerNode : ProcessNode
+namespace TLRPGEditor
 {
-	[Input(backingValue = ShowBackingValue.Never)]
-	public bool enter;
-	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
-	public bool exit;
-
-	[OnValueChanged("Init")]
-	[ValueDropdown("eventList")]
-	public string eventName;
-	public UnityEvent newEvent;
-	public List<string> eventList
+	[NodeWidth(400)]
+	[NodeTint("#942424")]//Node颜色
+	[System.Serializable]
+	[CreateNodeMenu("事件/为事件添加行为")]
+	public class AddListenerNode : ProcessNode
 	{
-		get
+		[Input(backingValue = ShowBackingValue.Never)]
+		public bool enter;
+		[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
+		public bool exit;
+
+		[OnValueChanged("Init")]
+		[ValueDropdown("eventList")]
+		public string eventName;
+		public UnityEvent newEvent;
+		public List<string> eventList
 		{
-			List<string> res = new List<string>();
-			foreach (var item in ProcessNodeGraph.eventQueue.events.Keys)
+			get
 			{
-				res.Add(item);
+				List<string> res = new List<string>();
+				foreach (var item in ProcessNodeGraph.eventQueue.events.Keys)
+				{
+					res.Add(item);
+				}
+				return res;
 			}
-			return res;
 		}
-	}
-	
-	private UnityEvent nodeEvent;
 
-	protected override void Init()
-	{
-		base.Init();
-		if (ProcessNodeGraph.eventQueue.FindEvent(eventName) != null)
-			nodeEvent = ProcessNodeGraph.eventQueue.FindEvent(eventName);
-	}
+		private UnityEvent nodeEvent;
 
-	public override object GetValue(NodePort port)
-	{
-		return null;
-	}
+		protected override void Init()
+		{
+			base.Init();
+			if (ProcessNodeGraph.eventQueue.FindEvent(eventName) != null)
+				nodeEvent = ProcessNodeGraph.eventQueue.FindEvent(eventName);
+		}
 
-	public override void MoveNext()
-	{
-		MoveNextNode();
-	}
+		public override object GetValue(NodePort port)
+		{
+			return null;
+		}
 
-	public void AddNewListener()
-    {
-		newEvent.Invoke();
-	}
+		public override void MoveNext()
+		{
+			MoveNextNode();
+		}
 
-	public override void OnEnter()
-	{
-		nodeEvent?.AddListener(AddNewListener);
-		MoveNext();
+		public void AddNewListener()
+		{
+			newEvent.Invoke();
+		}
+
+		public override void OnEnter()
+		{
+			nodeEvent?.AddListener(AddNewListener);
+			MoveNext();
+		}
 	}
 }

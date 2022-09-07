@@ -1,4 +1,4 @@
-using XNode;
+﻿using XNode;
 using UnityEngine;
 using System.Collections;
 using Sirenix.OdinInspector;
@@ -7,16 +7,15 @@ using System.Collections.Generic;
 namespace TLRPGEditor
 {
 	[NodeWidth(200)]
-	[NodeTint("#3f6fa0")]
-	[CreateNodeMenu("数据/获取触发器")]
-	public class GetTriggerNode : ProcessNode
+	[NodeTint("#2B714C")]
+	[CreateNodeMenu("流程/开始")]
+	[NodeTitle("对话开始")]
+	public class DialogueStartNode : ProcessNode
 	{
-		[Input(backingValue = ShowBackingValue.Never)]
-		public bool enter;
 		[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
 		public bool exit;
 
-		public string triggerName;
+		public string diaogueName;
 
 		protected override void Init()
 		{
@@ -24,21 +23,26 @@ namespace TLRPGEditor
 			rpgGraph.SetStartNode(this);
 		}
 
-		// Return the correct value of an output port when requested
 		public override object GetValue(NodePort port)
 		{
-			return null; // Replace this
+			return null;
 		}
 
 		public override void MoveNext()
 		{
-			if (PlayerPrefs.HasKey(triggerName))
-				MoveNextNode();
+			MoveNextNode();
 		}
 
 		public override void OnEnter()
 		{
+			Debug.Log("RPGNode Start");
 			MoveNext();
+		}
+
+		[Button("AddDialogue")]
+		public void AddDialogue()
+		{
+			ProcessNodeGraph.ProcessNodes.Add(diaogueName, rpgGraph);
 		}
 	}
 }

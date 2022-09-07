@@ -4,19 +4,22 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu]
-[System.Serializable]
-public class NPCNodeGraph : ProcessNodeGraph
+namespace TLRPGEditor
 {
-	public static List<NPCNodeGraph> npcNodes=new List<NPCNodeGraph>();
-	[NonSerialized]public NPCNode npcNode;
-
-    public NPCNodeGraph()
+    [CreateAssetMenu]
+    [System.Serializable]
+    public class NPCNodeGraph : ProcessNodeGraph
     {
-        npcNodes.Add(this);
+        public static List<NPCNodeGraph> npcNodes = new List<NPCNodeGraph>();
+        [NonSerialized] public NPCNode npcNode;
+
+        public NPCNodeGraph()
+        {
+            npcNodes.Add(this);
+        }
+        public void SetNPCNode(NPCNode node)
+        {
+            npcNode = node;
+        }
     }
-    public void SetNPCNode(NPCNode node)
-	{
-		npcNode = node;
-	}
 }

@@ -4,13 +4,16 @@ using System.Collections;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-public class NPCSceneGraph:SerializedMonoBehaviour
+namespace TLRPGEditor
 {
-	public static NPCSceneGraph Instance;
-	public List<NPCNodeGraph> npcNodes;
-
-    public void Awake()
+    public class NPCSceneGraph : SerializedMonoBehaviour
     {
-        Instance = this; 
+        public static NPCSceneGraph Instance;
+        public List<NPCNodeGraph> npcNodes;
+
+        public void Awake()
+        {
+            Instance = this;
+        }
     }
 }

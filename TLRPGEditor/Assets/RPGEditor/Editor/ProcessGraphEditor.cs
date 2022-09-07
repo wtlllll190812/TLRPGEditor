@@ -1,15 +1,18 @@
 using System;
 using XNodeEditor;
 
-[CustomNodeGraphEditor(typeof(ProcessNodeGraph))]
-public class ProcessGraphEditor : NodeGraphEditor
+namespace TLRPGEditor
 {
-    public override string GetNodeMenuName(Type type)
+    [CustomNodeGraphEditor(typeof(ProcessNodeGraph))]
+    public class ProcessGraphEditor : NodeGraphEditor
     {
-        if (typeof(ProcessNode).IsAssignableFrom(type))
+        public override string GetNodeMenuName(Type type)
         {
-            return base.GetNodeMenuName(type);
+            if (typeof(ProcessNode).IsAssignableFrom(type))
+            {
+                return base.GetNodeMenuName(type);
+            }
+            else return null;
         }
-        else return null;
     }
 }

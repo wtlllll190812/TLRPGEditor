@@ -3,51 +3,54 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
-[NodeWidth(200)]
-[NodeTint("#942424")]//Node颜色
-[CreateNodeMenu("事件/触发事件")]
-[System.Serializable]
-public class EventTriggerNode : ProcessNode 
+namespace TLRPGEditor
 {
-	[Input(backingValue = ShowBackingValue.Never)]
-	public bool enter;
-
-	[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
-	public bool exit;
-	
-	[ValueDropdown("eventList")]
-	public string eventName;
-	public List<string> eventList 
+	[NodeWidth(200)]
+	[NodeTint("#942424")]//Node颜色
+	[CreateNodeMenu("事件/触发事件")]
+	[System.Serializable]
+	public class EventTriggerNode : ProcessNode
 	{
-		get 
+		[Input(backingValue = ShowBackingValue.Never)]
+		public bool enter;
+
+		[Output(backingValue = ShowBackingValue.Never, typeConstraint = TypeConstraint.Strict)]
+		public bool exit;
+
+		[ValueDropdown("eventList")]
+		public string eventName;
+		public List<string> eventList
 		{
-			List<string> res = new List<string>();
-			foreach (var item in ProcessNodeGraph.eventQueue.events.Keys)
-            {
-				res.Add(item);
-            }
-			return res;
-		} 
-	}
+			get
+			{
+				List<string> res = new List<string>();
+				foreach (var item in ProcessNodeGraph.eventQueue.events.Keys)
+				{
+					res.Add(item);
+				}
+				return res;
+			}
+		}
 
-	protected override void Init()
-	{
-		base.Init();
-	}
+		protected override void Init()
+		{
+			base.Init();
+		}
 
-	public override object GetValue(NodePort port)
-	{
-		return null;
-	}
+		public override object GetValue(NodePort port)
+		{
+			return null;
+		}
 
-	public override void MoveNext()
-	{
-		ProcessNodeGraph.eventQueue.InVokeEvent(eventName);
-		MoveNextNode();
-	}
+		public override void MoveNext()
+		{
+			ProcessNodeGraph.eventQueue.InVokeEvent(eventName);
+			MoveNextNode();
+		}
 
-	public override void OnEnter()
-	{
-		MoveNext();
+		public override void OnEnter()
+		{
+			MoveNext();
+		}
 	}
 }
